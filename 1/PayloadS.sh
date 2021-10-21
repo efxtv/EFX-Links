@@ -90,6 +90,10 @@ tput setaf 1; echo "                   ╱▔▔▔▔╲
 echo -e "\e[1;31m[\e[0m\e[1;37mOk\e[0m\e[1;31m]\e[0m\e[1;92m The port you forwarded:👉 \e[0m\e[1;93m $port"
 echo " "
 #below lines can be sued for generating direct link.
+#you can generage link by two ways 
+#it requires to install jq (sudo apt install jq)
+#1st curl -sS http://localhost:4040/api/tunnels | jq '.tunnels[0].public_url'|sed 's#"##g'
+#and the 2nd is below no jq or external package required it runs on curl only
 ngrok_link=$(curl -s -N http://127.0.0.1:4040/api/tunnels|sed 's#"#\n"\n#g'|grep https|head -1)
 printf "\e[1;31m[\e[0m\e[1;37mOk\e[0m\e[1;31m]\e[0m\e[1;92m SHARE THIS LINK :👉 \e[0m\e[1;93m %s \n" $ngrok_link
 #Part generating direct link ends here.
