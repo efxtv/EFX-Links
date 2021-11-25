@@ -27,3 +27,8 @@ To close all the connections you need to choose the option 4 than option 5 to ex
 
 Run this bash file anywhere in the terminal and it will install the Ngrok first than forward the port according to your input.
 
+---------------------------------------
+India :  7503453371@ybl<br />
+<a href="https://paypal.me/efxtv"><img src="https://raw.githubusercontent.com/efxtv/efxtv/master/assets/donate-efx-tv.png" alt="Paypal" width="125" height="40"></a>
+---------------------------------------
+
